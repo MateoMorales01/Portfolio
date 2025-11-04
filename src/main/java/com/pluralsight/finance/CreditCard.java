@@ -5,6 +5,17 @@ public class CreditCard extends Account {
         super(name, accountNumber, balance);
     }
 
+    public  double charge(double amount){
+        double newBalance = getBalance() + amount;
+        setBalance(newBalance);
+        return newBalance;
+    }
+    public double pay(double amount){
+        double newBalance = getBalance() - amount;
+        setBalance(newBalance);
+        return newBalance;
+    }
+
     @Override
     public double getValue() {
         return getBalance();

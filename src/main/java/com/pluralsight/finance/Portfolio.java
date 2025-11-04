@@ -1,5 +1,6 @@
 package com.pluralsight.finance;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class Portfolio implements Valuable {
@@ -17,6 +18,14 @@ public class Portfolio implements Valuable {
     }
 
     public double getValue() {
+        //Loop through the Valuables in ArrayList assets
+        // keep a total
+        double total = 0;
+        for (Valuable valuable: assets) {
+            //add everything up
+            total += valuable.getValue();
+        }
+        //return the total
         return 0;
     }
 }
